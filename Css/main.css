@@ -6,3 +6,13 @@
     border-radius: 5px;
     display: none;
 }
+
+button {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin: auto; 
+    margin-top: 15px;   
+}
