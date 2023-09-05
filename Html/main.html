@@ -14,7 +14,8 @@
     -->
     <div class="alert-box" id="alert">Alert</div>
     <button onclick="btnopen('block')" id="btn">open</button>
-    <button onclick="btnclose()" id="btn-close">close</button>
+    <button onclick="btnopen('none')" id="btn">close</button>
+    <!-- <button onclick="btnclose()" id="btn-close">close</button> -->
 
     <script>
         //function 작명은 구체적인게 좋음
@@ -30,9 +31,9 @@
         // 문자는 '여기 안에쓰기'
         // 숫자는 그대로
         
-        function btnclose() {
-            document.getElementById('alert').style.display='none';
-        }
+        // function btnclose() {
+        //     document.getElementById('alert').style.display='none';
+        // }
     </script>
 </body>
 </html>
