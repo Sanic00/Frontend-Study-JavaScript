@@ -14,7 +14,7 @@
     -->
     <div class="alert-box" id="alert"><p id="login">Alert</p></div>
     <button onclick="btnopen('block')" id="btn">open</button>
-    <button onclick="btnopen('none')" id="btn">close</button>
+    <button id="close">close</button>
     <button onclick="login('아이디입력하셈')" id="login-btn">버튼1</button>
     <button onclick="login('비밀번호입력하셈')" id="login-btn">버튼2</button>
     <!-- <button onclick="btnclose()" id="btn-close">close</button> -->
@@ -52,6 +52,10 @@
         
         //클래스명 중복일때는 인덱스로 찾아달라고 명시 해줘야됨 
         document.getElementsByClassName('title1')[1].innerHTML = '안녕';
+
+        document.getElementById('close').addEventListener('click', function close() {
+            document.getElementById('alert').style.display = 'none';
+        });
     </script>
 </body>
 </html>
