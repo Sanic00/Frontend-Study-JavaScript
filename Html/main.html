@@ -53,9 +53,16 @@
         //클래스명 중복일때는 인덱스로 찾아달라고 명시 해줘야됨 
         document.getElementsByClassName('title1')[1].innerHTML = '안녕';
 
+        //onclick 말고도 addEventListener 움직임을 줄 수 있음
         document.getElementById('close').addEventListener('click', function close() {
             document.getElementById('alert').style.display = 'none';
         });
+
+        //event가 뭐냐면 -> 클릭,입력,스크롤,드래그가 이벤트임
+        //event 감지하고 싶으면 addEventListener('event명')
+        //파라미터 자리에 들어가는 함수를 콜백함수라고 함수 
+//       scroll 감지하고 싶으면 addEventListener('scroll',function 펑션이름(){
+//       });
     </script>
 </body>
 </html>
