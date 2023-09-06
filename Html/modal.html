@@ -19,7 +19,7 @@
                  <div class="my-3">
                    <input type="password" class="form-control">
                  </div>
-                 <button type="submit" class="btn btn-primary">전송</button>
+                 <button type="submit" class="btn btn-primary" id="send">전송</button>
                  <button type="button" class="btn btn-danger" id="close">닫기</button>
               </form> 
         </div>
@@ -55,7 +55,17 @@
             $('.black-bg');
         });
 
+        // if(조건){ 조건이 참일때 실행할 코드}
 
+        if(조건){
+            console.log('hellong');
+        }
+
+
+        //전송 버튼 누를떄 첫째 <input>에 입력된게 없으면 alert 띄우기 
+        $('#send').on('click', function send() {
+            
+        })
     </script>
 </body>
 </html>
