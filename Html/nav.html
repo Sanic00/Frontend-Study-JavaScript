@@ -21,10 +21,11 @@
     
       <!-- UI 만드는 법 1. 미리 서브메뉴를 html css로 디자인 
          2. 버튼 누르면 보여달라고 JS짬 
-            이번에는 class탈 부착으로 구현-->
+            이번에는 class 탈부착으로 구현
+            class 부착식으로 개발하면 애니메이션 추가 쉬움, 나중에 재사용 편리함-->
          <div class="row">
             <div class="col-4">
-              <div id="list-example" class="list-group">
+              <div id="list-example" class="list-group show">
                 <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
                 <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
                 <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
@@ -32,5 +33,16 @@
               </div>
             </div>
           </div>
+
+          <script>
+
+            document.querySelector('.list-group')
+            document.querySelectorAll('.list-group-item')[1]
+           
+           document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function show() {
+            document.getElementsByClassName('list-group')[0].classList.toggle('show');
+           });
+
+          </script>
 </body>
 </html>
