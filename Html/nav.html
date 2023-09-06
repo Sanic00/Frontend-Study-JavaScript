@@ -34,6 +34,8 @@
             </div>
           </div>
 
+          <p class="hello">Hi</p>
+          <button id="test-btn"></button>
           <script>
 
             document.querySelector('.list-group')
@@ -41,14 +43,22 @@
            
            document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function show() {
             document.getElementsByClassName('list-group')[0].classList.toggle('show');
-           });
+           })
 
            document.querySelector('.navbar-toggler')[0].addEventListener('click', function show() {
             document.querySelectorAll('.list-group')[2].classList.toggle('show');
-           });
+           })
+
+           //document.querySelector('.hello').innerHTML='Hello';
+           $('.hello').html('aho');
+           $('.hello').css('color', 'red');
+           $('.hello').addClass('show'); 
+           $('.test-btn').on('click', function () {
+            $('.hello').fadeOut();
+           })
 
           </script>
-
+        <!-- 거의 모든 자바스크립트 라이브러리는 <body>끝나기 전에 넣는거 권장 -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
 </html>
