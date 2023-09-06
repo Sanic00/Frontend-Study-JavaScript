@@ -17,6 +17,11 @@
     padding: 30px;
 }
 
+.main-bg {
+    padding: 100px 20px;
+    background: lightgray;
+}
+
 .show-modal {
     /* display: block; */
     visibility : visible; /*애니메이션 줄떄 display:block대용*/
