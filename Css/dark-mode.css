@@ -1,3 +1,8 @@
 .dark {
     background: black;
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
 }
