@@ -61,3 +61,19 @@ function refills(first) {
 }
 
 refills(360);
+
+
+var year = '1335'; 
+var count = 0;
+
+    $('#send-answer').on('click',function answer() {
+        count +=1;
+        var solution = $('#answer').value;
+        if(solution == year) {
+            alert('exactly!! youre very smart yeah!');
+        }else if(count >= 3 && solution != '1335'){
+            alert('aho');
+        }
+    });
+
+    
