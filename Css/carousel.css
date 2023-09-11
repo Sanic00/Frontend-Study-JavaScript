@@ -1,0 +1,16 @@
+
+.slide-container {
+    width: 300vw;
+    /* 브라우저폭 == 100w  */
+    margin-: ;
+}
+
+.slide-box {
+    width : 100vw;
+    float: left;
+}
+
+.slide-box > img {
+    width : 100%;
+}
+
