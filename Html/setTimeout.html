@@ -9,32 +9,42 @@
 </head>
 <body>  
     <div class="alert alert-danger">
-       5초 이내 구매시 사은품 증정!
+       <span id="num">5</span>초 이내 구매시 사은품 증정!
     </div>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
 
-        setTimeout(function () {"code~~~"}, 1000)
-        setTimeout(function () {console.log('Hi')}, 1000)
+        // setTimeout(function () {"code~~~"}, 1000)
+        // setTimeout(function () {console.log('Hi')}, 1000)
 
-        setTimeout(function () {
-            $('.alert').hide();
-        }, 1000)
+        // setTimeout(function () {
+        //     $('.alert').hide();
+        // }, 1000)
         
-        //1초마다 이걸 실행해주세요 ->setInterval
-        setInterval(function () {
-            console.log('HI')
-        }, 5000)
+        // //1초마다 이걸 실행해주세요 ->setInterval
+        // setInterval(function () {
+        //     console.log('HI')
+        // }, 5000)
 
-        function name() {
-           console.log('Heeeeeee!'); 
-        }
+        // function name() {
+        //    console.log('Heeeeeee!'); 
+        // }
 
-        setInterval( name , 3000);
+        // setInterval( name , 3000);
+        // addEventListener('click', name)
 
+        var count = 5;
 
-    </script>
+     setInterval(function(){
+        count -= 1;
+        if (count >= 0){
+         document.querySelector('#num').innerHTML = count;
+            } if (counnt == 0){
+                document.querySelector('.alert').hide();
+            }
+         }, 1000);
+     </script>
 
     <!-- 지금까지 배운것들
     if var function  -> 이건 자바스크립트 문법
