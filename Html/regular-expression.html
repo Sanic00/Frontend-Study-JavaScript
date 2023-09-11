@@ -16,7 +16,7 @@
                   <input type="text" class="form-control" name="userid" id="id">
                  </div>
                  <div class="my-3">
-                   <input type="password" class="form-control" name="password">
+                   <input type="password" class="form-control" name="password" id="password">
                  </div>
                  <button type="submit" class="btn btn-primary" id="send">전송</button>
                  <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -34,6 +34,16 @@
                 alert('email checked');
             }
         })
+
+        $('.form').on('submit',function(){
+            var input_pass = $('#password').val;
+            if($('#password'), val == ''){
+
+            }
+            if(/(A-Z)/.test(input_pass) == false){
+                alert('password error!');
+            }
+        });
     </script>
 </body>
 </html>
