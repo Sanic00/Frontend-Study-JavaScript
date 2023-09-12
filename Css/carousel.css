@@ -2,7 +2,8 @@
 .slide-container {
     width: 300vw;
     /* 브라우저폭 == 100w  */
-    margin-: ;
+    transition: all 1s;
+
 }
 
 .slide-box {
