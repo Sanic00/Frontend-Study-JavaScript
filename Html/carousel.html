@@ -29,10 +29,12 @@
     </div>
 </div>
 
+<button class="before">before</button>
 <button class="slide-1">1</button>
 <button class="slide-2">2</button>
 <button class="slide-3">3</button>
 <button class="next">Next</button>
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -44,7 +46,7 @@
         $('.slide-container').css('transform', 'translatex(-200vw)');
     })
     $('.slide-1').on('click',function () {
-        $('.slide-container').css('transform', 'translatex(0vw)');
+        $('.slide-container').css('transform',  'translatex(0vw)');
     })
     
     // 다음 버튼을 누르면 
@@ -52,12 +54,28 @@
     // 또 2번사진이면 3번 사진을 보여주세요.
 
     var now = 1;
-    $('.nex t').on('click', function () {
-        if($('.slide-1')){
-
+    $('.next').on('click', function () {
+        if(now == 1){
+            $('.slide-container').css('transform', 'translatex(-100vw)');
+            now++;
+        }else if(now == 2){
+            $('.slide-container').css('transform', 'translatex(-200vw)');
+            now++;   
         }
     })
 
+    var before = now;
+    $('.before').on('click',function () {
+        if(before - 1 == 0){
+        $('.slide-container').css('transform', 'translatex(-200vw)');
+        before--;
+        }else if (before-1 == -1){
+            $('.slide-container').css('transform', 'translatex(-100vw)');
+            before--;
+        }else if (before == -2) {
+            $('.slide-container').css('transform', 'translatex(0vw)');
+        }
+    })
 
 </script>
 
