@@ -15,3 +15,12 @@
     width : 100%;
 }
 
+.navbar {
+    position: fixed; /*상단 고정*/
+    width: 100%;
+    z-index: 5; 
+}
+
+.navbar-brand {
+    font-size: 30px; /*스크롤 바를 내릴경우 20px로 사이즈를 줄여주세요 숙제*/
+}

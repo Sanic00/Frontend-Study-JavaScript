@@ -47,7 +47,10 @@
 <button class="slide-3">3</button>
 <button class="next">Next</button>
 
-
+<div style="height: 1000px;"></div>
+<div style="width: 200px; height: 100px; overflow-y: scroll;">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
@@ -93,6 +96,38 @@
         }else if (before == -2) {
             $('.slide-container').css('transform', 'translatex(0vw)');
         }
+    })
+
+    //유저가 얼마나 스크롤바를 얼마만큼 내렸는지 확인하는법
+    //얘가 스크롤 될때마다 함수를 실행시킴
+   // window.addEventListener('scroll', function () {
+        //console.log(window.scrollY); //Y 세로축 X 가로축
+        //강제스크롤 하는 방법
+       // window.scrollTo(0, 100); //window.scrollTo(x좌표, y좌표); 지금 부드럽게 이동하는게 Bootstrap에 이미 적용이 되어있어서 그럼
+        //현재 위치로부터 강제로 스크롤하기 
+       // window.scrollBy(x좌표, y좌표);
+   // });
+
+    //JQuery
+   // $(window).on('scroll', function(){
+        //현재 스크롤바 위치 출력
+      //  $(window).scrollTop(100) //scrollY랑 똑같음, 스크롤 이동도 가능
+   // });
+
+   //오늘의 숙제 : 
+
+// 1. 스크롤바를 100px 내리면 로고 폰트사이즈를 작게 만들어오십시오.
+
+// 반대로 100px 미만으로 내리면 로고 폰트사이즈를 크게 만들어옵시다. 
+
+// 2. 회원약관 박스를 거의 끝까지 스크롤하면 alert를 띄워줍시다.    
+    
+    //div 의 스크롤바 내린 양 + 눈에보이는 div 높이 == div의 실제높이 
+    $('.lorem').on('scroll', function (){
+        var scroll = document.querySelector('.lorem').scrollTop + 100;
+        var height = document.querySelector('.lorem').scrollHeight;
+        var 높이 = document.querySelector('.lorem').clientHeight;
+        console.log(scroll, height);
     })
 
 </script>
