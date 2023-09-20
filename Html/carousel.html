@@ -131,10 +131,13 @@
     
     //div 의 스크롤바 내린 양 + 눈에보이는 div 높이 == div의 실제높이 
     $('.lorem').on('scroll', function (){
-        var scroll = document.querySelector('.lorem').scrollTop + 100;
-        var height = document.querySelector('.lorem').scrollHeight;
-        var 높이 = document.querySelector('.lorem').clientHeight;
-        console.log(scroll, height);
+        var scroll = document.querySelector('.lorem').scrollTop  // scrollTop 은 
+        var 실제높이 = document.querySelector('.lorem').scrollHeight; //<div>실제 높이는 셀렉터.scrollHeight 
+        var div_height = document.querySelector('.lorem').clientHeight; // 이게 눈에 보이는 div높이 
+        var sum = scroll + div_height
+        parseInt(sum);
+        if(sum == 실제높이)
+            alert('Ok?????');
     })
 
 </script>
