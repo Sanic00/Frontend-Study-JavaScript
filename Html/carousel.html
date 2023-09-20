@@ -48,7 +48,7 @@
 <button class="next">Next</button>
 
 <div style="height: 1000px;"></div>
-<div style="width: 200px; height: 100px; overflow-y: scroll;">
+<div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll; margin-left: auto; margin-right: auto; margin-bottom: 100px;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -116,30 +116,46 @@
 
    //오늘의 숙제 : 
 
-// 1. 스크롤바를 100px 내리면 로고 폰트사이즈를 작게 만들어오십시오.
+// 1. 스크롤바를 100px 이상내리면 로고 폰트사이즈를 작게 만들어오십시오.
 
 // 반대로 100px 미만으로 내리면 로고 폰트사이즈를 크게 만들어옵시다. 
     $(window).on('scroll', function () {
         if(window.scrollY > 100) {
-            $('.navbar-brand').css('font-size ' , '15px');
+            $('.navbar-brand').css('font-size','10px');
         }else if(window.scrollY < 100){
-            $('.navbar-brand').css('font-size' , '50px');
+            $('.navbar-brand').css('font-size' , '25px');
         }
     });
 
 // 2. 회원약관 박스를 거의 끝까지 스크롤하면 alert를 띄워줍시다.    
-    
+    //스크롤한 양 과 보이는 높이 
     //div 의 스크롤바 내린 양 + 눈에보이는 div 높이 == div의 실제높이 
     $('.lorem').on('scroll', function (){
-        var scroll = document.querySelector('.lorem').scrollTop  // scrollTop 은 
+        var scroll = document.querySelector('.lorem').scrollTop; // scrollTop 은 
         var 실제높이 = document.querySelector('.lorem').scrollHeight; //<div>실제 높이는 셀렉터.scrollHeight 
         var div_height = document.querySelector('.lorem').clientHeight; // 이게 눈에 보이는 div높이 
-        var sum = scroll + div_height
+        var sum = scroll + div_height;
         parseInt(sum);
-        if(sum == 실제높이)
+        if(sum > 실제높이 - 10)
             alert('Ok?????');
     })
 
+    //Scroll 다룰 때 주의점 
+    //1. scroll 이벤트리스너 안의 코드는 1초에 60번 이상 실행됨  
+    //2. 바닥체크도 여러번 중복으로 해줄듯
+
+    //그럼 현재페이지 끝까지 스크롤 체크하는 방법은 ?
+    //페이지 로드가 완료시 실행해야 정확함 body태그 끝나기전에 쓰는게 좋음
+    document.querySelector('html').scrollHeight; //html 현재페이지 실제의 height를 찾아줌
+    document.querySelector('html').clientHeight; //현재페이지의 보이는 높이
+    window.scrollY();
+    
+    // 어차피 외워도 까먹음 이해해라 
+    // 1. 스크롤바 조작할 때 마다 코드가 실행 가능하구나
+    // 2. 박스의 실제 높이/ 보이는 높이를 구할수 있구나 
+    // 3. 스크롤 양 (스크롤 된 횟수) 구 할수 있구나 
+
+    //스크롤 진척상황 
 </script>
 
 </body>

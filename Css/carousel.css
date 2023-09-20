@@ -23,4 +23,5 @@
 
 .navbar-brand {
     font-size: 30px; /*스크롤 바를 내릴경우 20px로 사이즈를 줄여주세요 숙제*/
+    transition: all 1s;
 }
