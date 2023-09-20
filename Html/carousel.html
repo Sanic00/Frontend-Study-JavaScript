@@ -119,6 +119,13 @@
 // 1. 스크롤바를 100px 내리면 로고 폰트사이즈를 작게 만들어오십시오.
 
 // 반대로 100px 미만으로 내리면 로고 폰트사이즈를 크게 만들어옵시다. 
+    $(window).on('scroll', function () {
+        if(window.scrollY > 100) {
+            $('.navbar-brand').css('font-size ' , '15px');
+        }else if(window.scrollY < 100){
+            $('.navbar-brand').css('font-size' , '50px');
+        }
+    });
 
 // 2. 회원약관 박스를 거의 끝까지 스크롤하면 alert를 띄워줍시다.    
     
