@@ -13,7 +13,8 @@
 
     <div class="container mt-3">
         <div class="card p-3">
-            상품명 / 가격
+            <span>상품명</span> 
+            <span>가격</span>
         </div>
     </div>
 
@@ -26,6 +27,10 @@
         console.log(car[1]);
         console.log(car[3]);
         console.log(car);
+        //array 자료간 정렬가능 , 중간에 자르기도 가능 
+        car.sort();
+        car.slice(인덱스번호시작, 인덱스 번호끝); //중간에 자르기
+        //array 기본함수들 많으니 필요할때마다 찾자
         //object 자료형 key : value 형태로 저장가능한게 장점
                 //   key   value     key     value
         var car2 = {name :'소나타', price : 50000};
@@ -36,7 +41,10 @@
         //object 자료 수정/추가 
         car2.price = 60000;
         
-        
+        // array / object 차이점
+        // array는 순서대로 자료저장, object는 순서의 개념없음 자료의 이름을 붙여서 저장가능
+        //쇼핑사이트를 만들때 상품명 가격 사이즈 등 같은거는 object에서 저장
+
     </script>
 
     <div class="container mt-5">
