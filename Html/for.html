@@ -10,6 +10,35 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div class="container mt-3">
+        <div class="card p-3">
+            상품명 / 가격
+        </div>
+    </div>
+
+    <script>
+        // array 
+        var car = ['Sonata', 50000, 'white'];
+        car[0] = 'Avante';
+        car[3] = '100Kg';
+
+        console.log(car[1]);
+        console.log(car[3]);
+        console.log(car);
+        //object 자료형 key : value 형태로 저장가능한게 장점
+                //   key   value     key     value
+        var car2 = {name :'소나타', price : 50000};
+        // key 값은 그냥 변수명 같은거임 
+        console.log(car2['name']);
+        console.log(car2['price']);
+        console.log(car2.price);
+        //object 자료 수정/추가 
+        car2.price = 60000;
+        
+        
+    </script>
+
     <div class="container mt-5">
         <ul class="list">       
             <!-- data-작명="값" -->
