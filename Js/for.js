@@ -32,14 +32,36 @@
 //  for 반복문
 // let var 변수의 범위 차이가 있음
 for (let i=0; i < $('.tab-button'); i++) {
-    $('.tab-button').eq(i).on('click', function () {
-    $('.tab-button').removeClass('orange');
-    $('.tab-button').eq(i).addClass('orange');
-    $('.tab-content').removeClass('show');
-    $('.tab-content').eq(i).addClass('show'); 
+    $('.tab-button').eq(i).on('click', function (){ 
+     tab(i);
 });
 }
 
+function tab(num) {
+    $('.tab-button').eq(num).on('click', function (){
+        $('.tab-button').removeClass('orange');
+        $('.tab-button').eq(num).addClass('orange');
+        $('.tab-content').removeClass('show');
+        $('.tab-content').eq(num).addClass('show'); 
+    });
+}
+//이벤트 버블링 
+$('.list').click(function (e) {
+    //지금 누른게 버튼 0 이면 / (버튼 0에 orange 박스 0 show 부착하기) -> tab(0)
+    // if(e.target == document.querySelectorAll('tab-button')[0]){
+    //     tab(0);
+    // }
+    // if(e.target == document.querySelectorAll('tab-button')[1]){
+    //     tab(1);
+    // }
+    // if(e.target == document.querySelectorAll('tab-button')[2]){
+    //     tab(2);
+    // }
+    //지금 누른게 버튼 1 이면 / (버튼 0에 orange 박스 0 show 부착하기) -> tab(1)
+     //지금 누른게 버튼 2이면 / (버튼 0에 orange 박스 0 show 부착하기) -> tab(2)     
+    //  tab(지금누른버튼에 숨겨져잇는 data-id);
+     tab(e.target.dataset.id);
+})
 // 오늘의 결론 : 
 
 // for 문법의 용도를 잘 기억해둡시다.  
